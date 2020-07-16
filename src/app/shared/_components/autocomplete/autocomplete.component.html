@@ -1,0 +1,12 @@
+<div>
+<input type="text" [(ngModel)]="inputText" placeholder="Search"
+(keyup)="search($event)">
+</div>
+<div *ngIf="(inputText!=null && inputText !='')">
+    <div *ngFor="let item of finalFilterResult">
+        {{item.name}}
+    </div>
+</div>
+<br>
+<br>
+<br>
